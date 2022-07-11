@@ -9,6 +9,7 @@ Citizen.CreateThread(function()
     while true do
 
         for k, playerid in pairs(GetPlayers()) do
+            local src = source
             local xPlayer = ESX.GetPlayerFromId(playerid)
 
             if xPlayer ~= nil then
@@ -19,16 +20,16 @@ Citizen.CreateThread(function()
                 }
                 )
 
-                local tax = vehicleCount * 50
+                local tax = tonumber(vehicleCount) * Config.Tax
                 xPlayer.removeAccountMoney('bank', tax)
 
                 -- msg
-                TriggerClientEvent('taxes:notify', xPlayer.source, 'CHAR_BANK_MAZE', 'Du hast ~r~' .. tax .. '$ ~s~an Fahrzeugsteuern für ~y~' .. vehicleCount ..' Fahrzeuge ~s~gezahlt', 'Bundessteuerbehörde', 'Steuern gezahlt')
+                TriggerClientEvent('taxes:notify', xPlayer.source, tax, vehicleCount)
 
             end
         end
 
-        Citizen.Wait(12000)
+        Citizen.Wait(Config.Time)
     end
 
 end)
