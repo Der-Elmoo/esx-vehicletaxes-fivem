@@ -8,15 +8,8 @@ Citizen.CreateThread(function()
 end)
 
 RegisterNetEvent('taxes:notify')
-AddEventHandler('taxes:notify', function(icon, msg, title, subtitle)
-
-    showPictureNotification(icon, msg, title, sobtitle)
-
+AddEventHandler('taxes:notify', function(tax, vehicleCount)
+        
+    ESX.ShowAdvancedNotification(Translation[Config.Locale]['title'], '', string.format(Translation[Config.Locale]['description'], tax, vehicleCount), 'CHAR_BANK_MAZE', 9)
+        
 end)
-
-function showPictureNotification(icon, msg, title, subtitle)
-    SetNotificationTextEntry("STRING")
-    AddTextComponentString(msg);
-    SetNotificationMessage(icon, icon, true, 1, title, subtitle);
-    DrawNotification(false, true);
-end
