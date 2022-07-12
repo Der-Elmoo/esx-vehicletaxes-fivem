@@ -4,9 +4,8 @@ Taxes for vehicles. Thanks to myScripts for helping me
 # Installation
 1. Download the script
 2. Drag and Drop it into your resources folder
-4. Configurate it if you need
-4.1 If you have ESX Legacy follow the "ESX Legacy" instructions below.
-3. Add **start taxes** to your server.cfg
+4. Configurate it if you need (If you have ESX Legacy follow the "ESX Legacy" instructions below.)
+5. Add **start taxes** to your server.cfg
 
 # Credits
 Thanks to myScripts for helping me scripting this
