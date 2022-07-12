@@ -1,15 +1,10 @@
-ESX = nil
-
-Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
-end)
+local function showAdvancedNotification(tax, vehiclecount)
+    AddTextEntry('VehTaxesNotification', string.format(Translation[Config.Locale]['description'], tax, vehiclecount))
+    BeginTextCommandThefeedPost('VehTaxesNotification')
+    EndTextCommandThefeedPostMessagetext('CHAR_BANK_MAZE', 'CHAR_BANK_MAZE', false, 9, Translation[Config.Locale]['title'], '')
+end
 
 RegisterNetEvent('taxes:notify')
 AddEventHandler('taxes:notify', function(tax, vehicleCount)
-        
-    ESX.ShowAdvancedNotification(Translation[Config.Locale]['title'], '', string.format(Translation[Config.Locale]['description'], tax, vehicleCount), 'CHAR_BANK_MAZE', 9)
-        
+    showAdvancedNotification(tax, vehicleCount)
 end)
