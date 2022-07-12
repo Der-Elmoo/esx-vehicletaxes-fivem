@@ -1,12 +1,12 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'cerulean'
+game 'gta5'
+
 
 author 'der_elmoo'
 description 'Taxes for vehicles. Thanks to myScripts for helping me'
-version '1.0'
+version '1.1'
 
 shared_scripts {
-    '@es_extended/locale.lua',
-    'locales/*.lua',
     'config.lua'
 }
 
