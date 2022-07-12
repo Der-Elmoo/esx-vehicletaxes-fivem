@@ -12,5 +12,5 @@ Thanks to myScripts for helping me scripting this
 
 # ESX Legacy
 1. First set Config.Legacy to true
-2. Replace '@mysql-async/lib/MySQL.lua' at line 16 with: '@oxmysql/lib/MySQL.lua'
+2. Replace '@mysql-async/lib/MySQL.lua' at line 16 in fxmanifest.lua with: '@oxmysql/lib/MySQL.lua'
 
