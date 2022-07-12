@@ -12,25 +12,5 @@ Thanks to myScripts for helping me scripting this
 
 # ESX Legacy
 1. First set Config.Legacy to true
-2. Replace the fxmanifest.lua content with this:
+2. Replace '@mysql-async/lib/MySQL.lua' at line 16 with: '@oxmysql/lib/MySQL.lua'
 
-fx_version 'cerulean'
-game 'gta5'
-
-
-author 'der_elmoo'
-description 'Taxes for vehicles. Thanks to myScripts for helping me'
-version '1.1'
-
-shared_scripts {
-    '@es_extended/imports.lua',
-    'locales/*.lua',
-    'config.lua'
-}
-
-client_script 'client/main.lua'
-
-server_scripts {
-    '@oxmysql/lib/MySQL.lua',
-    'server/main.lua'
-}

@@ -33,8 +33,8 @@ if not Config.Legacy then
 
     
 else
-
-
+    local ESX = exports['es_extended']:getSharedObject()
+    
     Citizen.CreateThread(function()
         while true do
             for k, xPlayer in pairs(ESX.GetPlayers()) do
